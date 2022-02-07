@@ -202,7 +202,10 @@ pub fn get(filenames: Vec<String>) -> Configuration {
         "risinghf_rhf0m301_us915" => vendor::risinghf::rhf0m301_us915::new(&config),
         "sandbox_lorago_port_eu868" => vendor::sandbox::lorago_port_eu868::new(&config),
         "sandbox_lorago_port_us915" => vendor::sandbox::lorago_port_us915::new(&config),
-        "wifx_lorix_one_eu868" => vendor::wifx::lorix_one_eu868::new(&config),
+        "wifx_lorix_one_8XX" | "wifx_lorix_one_eu868" => {
+            vendor::wifx::lorix_one_8XX::new(&config)
+        }
+        "wifx_lorix_one_9XX" => vendor::wifx::lorix_one_9XX::new(&config),
         _ => panic!("unexpected gateway model: {}", config.gateway.model),
     };
 
