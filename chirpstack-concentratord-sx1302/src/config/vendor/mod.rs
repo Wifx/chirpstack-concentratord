@@ -2,6 +2,7 @@ use libloragw_sx1302::hal;
 
 pub mod rak;
 pub mod semtech;
+pub mod wifx;
 
 #[derive(Clone)]
 pub enum ComType {
