@@ -172,6 +172,8 @@ pub fn get(filenames: Vec<String>) -> Configuration {
         "rak_2287_kr920" => vendor::rak::rak2287_kr920::new(&config),
         "rak_2287_ru864" => vendor::rak::rak2287_ru864::new(&config),
         "rak_2287_us915" => vendor::rak::rak2287_us915::new(&config),
+        "wifx_l1_8XX" => vendor::wifx::l1_8XX::new(&config),
+        "wifx_l1_9XX" => vendor::wifx::l1_9XX::new(&config),
         _ => panic!("unexpected gateway model: {}", config.gateway.model),
     };
 
