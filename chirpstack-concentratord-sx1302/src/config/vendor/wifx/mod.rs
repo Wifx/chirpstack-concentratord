@@ -1,5 +1,11 @@
-pub mod l1_8XX;
-pub mod l1_9XX;
+#[allow(non_snake_case)]
+pub mod l1_8XX_A;
+#[allow(non_snake_case)]
+pub mod l1_8XX_B;
+#[allow(non_snake_case)]
+pub mod l1_9XX_A;
+#[allow(non_snake_case)]
+pub mod l1_9XX_B;
 
 use libloragw_sx1302::hal;
 
