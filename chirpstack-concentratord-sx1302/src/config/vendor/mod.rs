@@ -32,6 +32,7 @@ pub struct Configuration {
 
 #[derive(Clone)]
 pub struct RadioConfig {
+    #[allow(unused)]
     pub enable: bool,
     pub radio_type: hal::RadioType,
     pub single_input_mode: bool,

@@ -63,3 +63,9 @@ test:
 
 devshell:
 	docker-compose run --rm chirpstack-concentratord bash
+
+compose-build:
+	docker compose build chirpstack-concentratord
+
+compose-build-full:
+	docker compose build --no-cache chirpstack-concentratord
