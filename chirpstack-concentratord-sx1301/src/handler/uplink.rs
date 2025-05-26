@@ -58,7 +58,7 @@ pub fn handle_loop(gateway_id: &[u8], stop_receive: Receiver<Signal>) {
             Err(_) => error!("Receive error"),
         };
 
-        thread::sleep(Duration::from_millis(10));
+        thread::sleep(Duration::from_millis(20));
     }
 
     debug!("Uplink loop ended");

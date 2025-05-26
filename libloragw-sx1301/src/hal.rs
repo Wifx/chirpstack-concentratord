@@ -510,7 +510,7 @@ impl TxPacket {
     }
 }
 
-const MAX_PKT: usize = 8;
+const MAX_PKT: usize = 16;
 
 /// Configure the gateway board.
 pub fn board_setconf(conf: &BoardConfig) -> Result<(), String> {
