@@ -286,8 +286,8 @@ pub fn get(filenames: Vec<String>) -> Configuration {
         "rak_2247" => vendor::rak::rak2247::new(&config).unwrap(),
         "risinghf_rhf0m301" => vendor::risinghf::rhf0m301::new(&config).unwrap(),
         "sandbox_lorago_port" => vendor::sandbox::lorago_port::new(&config).unwrap(),
-        "wifx_lorix_one_8XX" => vendor::wifx::lorix_one_8XX::new(&config).unwrap(),
-        "wifx_lorix_one_9XX" => vendor::wifx::lorix_one_9XX::new(&config).unwrap(),
+        "wifx_lorix_one_8XX_A" => vendor::wifx::lorix_one_8XX_A::new(&config).unwrap(),
+        "wifx_lorix_one_9XX_A" => vendor::wifx::lorix_one_9XX_A::new(&config).unwrap(),
         _ => panic!("unexpected gateway model: {}", config.gateway.model),
     };
 
