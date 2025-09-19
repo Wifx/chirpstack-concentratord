@@ -136,13 +136,20 @@ impl Gateway {
     }
 
     pub fn get_sx1301_reset_pin(
+        
         &self,
+       
         default_chip: &str,
+       
         default_pin: u32,
+    ,
     ) -> Option<(String, u32)> {
         let chip = self
+            
             .sx1301_reset_chip
+            
             .clone()
+            
             .unwrap_or(default_chip.to_string());
         let pin = self.sx1301_reset_pin.unwrap_or(default_pin);
         Some((chip, pin))
@@ -279,7 +286,8 @@ pub fn get(filenames: Vec<String>) -> Configuration {
         "rak_2247" => vendor::rak::rak2247::new(&config).unwrap(),
         "risinghf_rhf0m301" => vendor::risinghf::rhf0m301::new(&config).unwrap(),
         "sandbox_lorago_port" => vendor::sandbox::lorago_port::new(&config).unwrap(),
-        "wifx_lorix_one" => vendor::wifx::lorix_one::new(&config).unwrap(),
+        "wifx_lorix_one_8XX" => vendor::wifx::lorix_one_8XX::new(&config).unwrap(),
+        "wifx_lorix_one_9XX" => vendor::wifx::lorix_one_9XX::new(&config).unwrap(),
         _ => panic!("unexpected gateway model: {}", config.gateway.model),
     };
 
