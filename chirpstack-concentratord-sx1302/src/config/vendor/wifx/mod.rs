@@ -1,18 +1,28 @@
 #[allow(non_snake_case)]
-pub mod lorix_one_8XX;
+pub mod l1_8XX_A;
 #[allow(non_snake_case)]
-pub mod lorix_one_9XX;
-pub(crate) mod lorix_one;
+pub mod l1_8XX_B;
+#[allow(non_snake_case)]
+pub mod l1_9XX_A;
+#[allow(non_snake_case)]
+pub mod l1_9XX_B;
 
-use libloragw_sx1301::hal;
+#[allow(non_snake_case)]
+pub mod l1;
 
-fn gain_param(rf_power: i8, pa: u8, mix: u8, dig: u8) -> hal::TxGainConfig {
+use libloragw_sx1302::hal;
+
+
+fn gain_param(rf_power: i8, pa: u8, pwr_idx: u8) -> hal::TxGainConfig {
     hal::TxGainConfig {
-        dig_gain: dig,
+        rf_power,
+        dig_gain: 0,
         pa_gain: pa,
-        dac_gain: 3,
-        mix_gain: mix,
-        rf_power: rf_power,
+        dac_gain: 0,
+        mix_gain: 5,
+        offset_i: 0,
+        offset_q: 0,
+        pwr_idx,
     }
 }
 

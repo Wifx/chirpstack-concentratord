@@ -358,6 +358,7 @@ pub fn get(filenames: Vec<String>) -> Configuration {
         "waveshare_sx1302_lorawan_gateway_hat" => {
             vendor::waveshare::sx1302_lorawan_gateway_hat::new(&config).unwrap()
         }
+        "wifx_l1" => vendor::wifx::l1::new(&config).unwrap(),
         _ => panic!("unexpected gateway model: {}", config.gateway.model),
     };
 
