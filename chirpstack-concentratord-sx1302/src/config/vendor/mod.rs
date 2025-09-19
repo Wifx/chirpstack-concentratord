@@ -8,6 +8,7 @@ pub mod rak;
 pub mod seeed;
 pub mod semtech;
 pub mod waveshare;
+pub mod wifx;
 
 #[derive(Default, Clone, PartialEq, Debug)]
 pub enum ComType {
